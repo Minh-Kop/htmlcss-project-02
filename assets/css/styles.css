@@ -46,6 +46,21 @@ a {
     margin-right: auto;
 }
 
+.line-clamb {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamb, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamb.line-2 {
+    --line-clamb: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 .heading {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -359,6 +374,7 @@ a {
 }
 
 .popular .course-item .title a {
+    padding-right: 6px;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.67;
