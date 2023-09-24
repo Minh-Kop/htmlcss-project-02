@@ -409,6 +409,7 @@ a {
 }
 
 .popular .course-item .book-btn {
+    font-size: 1.4rem;
     border: none;
 }
 
@@ -584,10 +585,12 @@ a {
     display: flex;
     gap: 30px;
     margin-top: 55px;
+    overflow: hidden;
 }
 
 .blog .blog-list .item {
-    width: 33.33%;
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
     border-radius: 16px;
     background: #ffffff;
 }
@@ -648,6 +651,31 @@ a {
     color: #171100;
 }
 
+.blog .item .btn {
+    font-size: 1.4rem;
+}
+
 .blog .item .btn:hover {
     background-color: var(--primary-color);
+}
+
+.blog .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 38px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
 }
